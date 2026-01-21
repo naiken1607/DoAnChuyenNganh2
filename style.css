@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  cursor: none;
+  background: url("image/backgruond.jpg") center / cover no-repeat;
+  font-family: Arial, Helvetica, sans-serif;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BẢNG CHÍNH */
+.card {
+  width: 700px;
+  padding: 25px;
+    position: relative;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+}
+
+/* PHẦN TRÊN */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.info h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.quote {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+/* BADGES */
+.badges {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badges span {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* LOCATION */
+.location {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* SOCIAL ICONS */
+.socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  cursor: none;
+}
+
+.socials a {
+  font-size: 22px;
+  text-decoration: none;
+  color: white;
+  cursor: none;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.socials a:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  cursor: none;
+}
+.card {
+  transition: transform 0.2s cubic-bezier(.2,.8,.2,1),
+              filter 0.2s ease;
+}
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+
+  pointer-events: none;
+  z-index: 9999;
+
+  background: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'>\
+<path d='M3 2l7 20 2-7 7-2z'/>\
+</svg>") no-repeat center / contain;
+
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.6));
+}
+.mini-card {
+  transition: transform 0.25s ease, background 0.25s ease;
+  cursor: pointer;
+  cursor: none;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 12px 16px;
+  border-radius: 16px;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.mini-card:hover {
+  transform: translateX(6px);
+  background: rgba(255,255,255,0.08);
+}
+.mini-profiles {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+/* mỗi ô */
+/* avatar */
+.mini-card img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.back-btn {
+  margin-top: 20px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.25);
+  display: none; /* ẩn mặc định */
+  background: rgba(255,255,255,0.1);
+  color: white;
+  cursor: none;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.85;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
