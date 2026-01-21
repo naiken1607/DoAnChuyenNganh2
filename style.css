@@ -166,7 +166,6 @@ body {
   background: rgba(255,255,255,0.1);
   color: white;
   cursor: none;
-  cursor: pointer;
   font-size: 14px;
   opacity: 0.85;
   transition: 0.2s;
@@ -175,4 +174,5 @@ body {
 .back-btn:hover {
   opacity: 1;
   transform: scale(1.05);
+
 }
